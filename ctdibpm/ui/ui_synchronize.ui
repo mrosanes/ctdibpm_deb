@@ -1,0 +1,266 @@
+<ui version="4.0">
+ <class>Synchronize</class>
+ <widget class="QDialog" name="Synchronize">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1060</width>
+    <height>633</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Synchronize time</string>
+  </property>
+  <layout class="QGridLayout">
+   <item row="0" column="0">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>221</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="1" colspan="3">
+    <layout class="QGridLayout">
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <item row="0" column="3">
+      <widget class="QLineEdit" name="MonthLineEdit"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="YearLineEdit">
+       <property name="text">
+        <string>2008</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Year:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="8">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Minute:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="11">
+      <widget class="QLineEdit" name="SecondLineEdit"/>
+     </item>
+     <item row="0" column="7">
+      <widget class="QLineEdit" name="HourLineEdit"/>
+     </item>
+     <item row="0" column="5">
+      <widget class="QLineEdit" name="DayLineEdit"/>
+     </item>
+     <item row="0" column="4">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Day:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Hour:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Month:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="9">
+      <widget class="QLineEdit" name="MinuteLineEdit"/>
+     </item>
+     <item row="0" column="10">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Second:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="4">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>221</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0" colspan="5">
+    <layout class="QGridLayout">
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <item row="0" column="3">
+      <widget class="QTableWidget" name="tableWidget4"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QTableWidget" name="tableWidget2"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QTableWidget" name="tableWidget1"/>
+     </item>
+     <item row="0" column="2">
+      <widget class="QTableWidget" name="tableWidget3"/>
+     </item>
+     <item row="0" column="4">
+      <widget class="QTableWidget" name="tableWidget5"/>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>301</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="2">
+    <layout class="QHBoxLayout">
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="clearButton">
+       <property name="toolTip">
+        <string>Clear cells contents</string>
+       </property>
+       <property name="text">
+        <string>Clear</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="setButton">
+       <property name="toolTip">
+        <string>Set configuration to liberas</string>
+       </property>
+       <property name="text">
+        <string>Set</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="loadConfButton">
+       <property name="minimumSize">
+        <size>
+         <width>31</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>Load configuration</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="ctdibpm.qrc">
+         <normaloff>:/icons/icons/open.png</normaloff>:/icons/icons/open.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveConfButton">
+       <property name="minimumSize">
+        <size>
+         <width>31</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>Save configuration</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="ctdibpm.qrc">
+         <normaloff>:/icons/icons/save.png</normaloff>:/icons/icons/save.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="doneButton">
+       <property name="toolTip">
+        <string>Clear cells contents</string>
+       </property>
+       <property name="text">
+        <string>Done</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="3" colspan="2">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>221</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>YearLineEdit</tabstop>
+  <tabstop>MonthLineEdit</tabstop>
+  <tabstop>DayLineEdit</tabstop>
+  <tabstop>HourLineEdit</tabstop>
+  <tabstop>MinuteLineEdit</tabstop>
+  <tabstop>SecondLineEdit</tabstop>
+  <tabstop>tableWidget1</tabstop>
+  <tabstop>tableWidget2</tabstop>
+  <tabstop>tableWidget3</tabstop>
+  <tabstop>tableWidget4</tabstop>
+  <tabstop>tableWidget5</tabstop>
+ </tabstops>
+ <resources>
+  <include location="ctdibpm.qrc"/>
+ </resources>
+ <connections/>
+</ui>

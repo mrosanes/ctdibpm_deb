@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/icons" >
+        <file>icons/AlbaLogo.png</file>
+        <file>icons/ctdibpm.png</file>
+        <file>icons/info.png</file>
+        <file>icons/selection.png</file>
+        <file>icons/new.png</file>
+        <file>icons/open.png</file>
+        <file>icons/print.png</file>
+        <file>icons/quit.png</file>
+        <file>icons/reload.png</file>
+        <file>icons/restart.png</file>
+        <file>icons/save2.png</file>
+        <file>icons/save.png</file>
+        <file>icons/screenshot.png</file>
+        <file>icons/start2.png</file>
+        <file>icons/stop.png</file>
+    </qresource>
+</RCC>

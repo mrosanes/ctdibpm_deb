@@ -1,0 +1,600 @@
+<ui version="4.0">
+ <class>Environment</class>
+ <widget class="QDockWidget" name="Environment">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1444</width>
+    <height>156</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Environment Parameters</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="_2">
+      <property name="leftMargin">
+       <number>3</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="EPxoffsetLabel">
+        <property name="text">
+         <string>X offset</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="EPxoffset"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="EPkxLabel">
+        <property name="sizePolicy">
+         <sizepolicy vsizetype="Preferred" hsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Kx</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="EPkx"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="EPzoffsetLabel">
+        <property name="text">
+         <string>Z offset</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="EPzoffset"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="EPkzLabel">
+        <property name="sizePolicy">
+         <sizepolicy vsizetype="Preferred" hsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Kz</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLineEdit" name="EPkz"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="EPqoffsetLabel">
+        <property name="text">
+         <string>Q offset</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="EPqoffset"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="dummyLabel">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <layout class="QGridLayout" name="_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="EPswitchesLabel">
+        <property name="text">
+         <string>Sw</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="EPswitches">
+        <property name="toolTip">
+         <string>Switches control</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>DIRECT</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>AUTO</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="EPclocksourceLabel">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>Clk source</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QComboBox" name="EPclocksource">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy vsizetype="Fixed" hsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>85</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>70</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Clock source</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>INTERNAL</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>EXTERNAL</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="EPswitchdelayLabel">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="toolTip">
+         <string>OffsetTune Units</string>
+        </property>
+        <property name="text">
+         <string>Sw. delay</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QLineEdit" name="EPswitchdelay">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="EPdscLabel">
+        <property name="text">
+         <string>Dsc</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="EPdsc">
+        <property name="toolTip">
+         <string>Digital signal conditioning</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>OFF</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>UNITY</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>AUTO</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>SAVE</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="EPofftunemodeLabel">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="toolTip">
+         <string>OffsetTune Mode</string>
+        </property>
+        <property name="text">
+         <string>Comp tune</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QComboBox" name="EPofftunemode">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>70</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Tune mode</string>
+        </property>
+        <property name="statusTip">
+         <string>OffsetTune Mode</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>SINGLE</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>DOUBLE</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QLabel" name="EPofftuneunitsLabel">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="toolTip">
+         <string>OffsetTune Units</string>
+        </property>
+        <property name="text">
+         <string>Off tune</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QLineEdit" name="EPofftuneunits">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="EPagc">
+        <property name="contextMenuPolicy">
+         <enum>Qt::CustomContextMenu</enum>
+        </property>
+        <property name="toolTip">
+         <string>Automatic Gain Control</string>
+        </property>
+        <property name="text">
+         <string>AGC</string>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="EPgain"/>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="EPpmoffsetLabel">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="toolTip">
+         <string>OffsetTune Mode</string>
+        </property>
+        <property name="text">
+         <string>PM offset</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLineEdit" name="EPpmoffset">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QLabel" name="EPtrigdelayLabel">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="toolTip">
+         <string>OffsetTune Mode</string>
+        </property>
+        <property name="text">
+         <string>Trig. delay</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5">
+       <widget class="QLineEdit" name="EPtrigdelay">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="dummyLabel_2">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="EPmaflengthLabel">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>MAF len.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QLineEdit" name="EPmaflength">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="4">
+       <widget class="QLabel" name="EPmafdelayLabel">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>MAF delay</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="5">
+       <widget class="QLineEdit" name="EPmafdelay">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="2">
+     <layout class="QGridLayout" name="_4">
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="EPmodeLabel">
+        <property name="toolTip">
+         <string>Interlock mode</string>
+        </property>
+        <property name="text">
+         <string>Ilk mode</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="EPmode">
+        <property name="sizePolicy">
+         <sizepolicy vsizetype="Fixed" hsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>70</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>55</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Interlock mode</string>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QComboBox::AdjustToContents</enum>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string>OFF</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ON</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ON+GAIN</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_10">
+        <property name="toolTip">
+         <string>Interlock gain limit</string>
+        </property>
+        <property name="text">
+         <string>Gain Lim</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="EPgainlimit">
+        <property name="maximumSize">
+         <size>
+          <width>65</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_14">
+        <property name="toolTip">
+         <string>Interlock X Low</string>
+        </property>
+        <property name="text">
+         <string>X low</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="EPxlow"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_15">
+        <property name="toolTip">
+         <string>Interlock Z Low</string>
+        </property>
+        <property name="text">
+         <string>Z low</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLineEdit" name="EPzlow"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_12">
+        <property name="toolTip">
+         <string>Interlock X High</string>
+        </property>
+        <property name="text">
+         <string>X high</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="EPxhigh"/>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_13">
+        <property name="toolTip">
+         <string>Interlock Z High</string>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string>Z high</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLineEdit" name="EPzhigh"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_16">
+        <property name="toolTip">
+         <string>Interlock overflow limit</string>
+        </property>
+        <property name="text">
+         <string>Overf lim</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="EPoverflim"/>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="label_18">
+        <property name="text">
+         <string>Overf Dur</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QLineEdit" name="EPoverfdur"/>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="3">
+     <layout class="QVBoxLayout" name="_5">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="EPget">
+        <property name="toolTip">
+         <string>Get Parameters from the libera machine</string>
+        </property>
+        <property name="text">
+         <string>Get</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="EPset">
+        <property name="toolTip">
+         <string>Set parameters to the libera machine</string>
+        </property>
+        <property name="text">
+         <string>Set</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="EPsettime">
+        <property name="toolTip">
+         <string>Set Time</string>
+        </property>
+        <property name="text">
+         <string>Set Time</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,2286 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1454</width>
+    <height>1117</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Libera GUI</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="ctdibpm.qrc" >
+    <normaloff>:/icons/icons/ctdibpm.png</normaloff>:/icons/icons/ctdibpm.png</iconset>
+  </property>
+  <property name="dockNestingEnabled" >
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <layout class="QGridLayout" name="gridLayout_7" >
+    <item row="0" column="0" >
+     <layout class="QVBoxLayout" name="verticalLayout" >
+      <item>
+       <widget class="QTabWidget" name="tabWidget" >
+        <property name="enabled" >
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="currentIndex" >
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab" >
+         <attribute name="title" >
+          <string>ADC</string>
+         </attribute>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <widget class="TaurusPlot" name="ADCplot" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" >
+           <layout class="QVBoxLayout" >
+            <item>
+             <widget class="QGroupBox" name="groupBoxADC" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="layoutDirection" >
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="title" >
+               <string>Acquisition</string>
+              </property>
+              <layout class="QGridLayout" >
+               <property name="margin" >
+                <number>5</number>
+               </property>
+               <item row="0" column="0" >
+                <widget class="QLabel" name="label" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Samples</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0" >
+                <widget class="QLabel" name="label_3" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Triggers</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1" >
+                <widget class="TaurusLabel" name="ADCtriggers" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>0</width>
+                   <height>24</height>
+                  </size>
+                 </property>
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="0" >
+                <widget class="QLabel" name="aADCpeakLabel" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text" >
+                  <string>Ch. A peak</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="0" >
+                <widget class="QLabel" name="bADCpeakLabel" >
+                 <property name="text" >
+                  <string>Ch. B peak</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="0" >
+                <widget class="QLabel" name="cADCpeakLabel" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text" >
+                  <string>Ch. C peak</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="0" >
+                <widget class="QLabel" name="dADCpeakLabel" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text" >
+                  <string>Ch. D peak</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="11" column="0" >
+                <widget class="QLabel" name="label_36" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text" >
+                  <string>Single</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="11" column="1" >
+                <widget class="QCheckBox" name="ADCcheckSingle" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>0</width>
+                   <height>24</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string/>
+                 </property>
+                 <property name="checked" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="12" column="1" >
+                <widget class="QPushButton" name="ADCstart" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>0</width>
+                   <height>24</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string>Start</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="13" column="1" >
+                <widget class="QPushButton" name="ADCstop" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>0</width>
+                   <height>24</height>
+                  </size>
+                 </property>
+                 <property name="text" >
+                  <string>Stop</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="1" >
+                <widget class="TaurusLabel" name="ADCPeakA" >
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="1" >
+                <widget class="TaurusLabel" name="ADCPeakB" >
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="1" >
+                <widget class="TaurusLabel" name="ADCPeakC" >
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="1" >
+                <widget class="TaurusLabel" name="ADCPeakD" >
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1" >
+                <widget class="TaurusValueLineEdit" name="ADCsamples" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>0</width>
+                   <height>24</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1" >
+                <widget class="TaurusLabel" name="ADCsamplesRB" >
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1" >
+                <widget class="TaurusLabel" name="ADCloopsRB" >
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1" >
+                <widget class="TaurusValueLineEdit" name="ADCloops" />
+               </item>
+               <item row="4" column="0" >
+                <widget class="QLabel" name="label_5" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Loops</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="14" column="1" >
+                <widget class="QPushButton" name="ADCsave" >
+                 <property name="text" >
+                  <string>Save</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="15" column="0" >
+                <widget class="QLabel" name="labelADCTimestamp" >
+                 <property name="text" >
+                  <string>Timestamp</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="15" column="1" >
+                <layout class="QHBoxLayout" name="horizontalLayout_5" >
+                 <item>
+                  <widget class="TaurusLed" name="ADCtimestampRB" />
+                 </item>
+                 <item>
+                  <widget class="TaurusValueCheckBox" name="ADCtimestamp" >
+                   <property name="showText" >
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoApply" >
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_2" >
+         <attribute name="title" >
+          <string>DD XZVolt</string>
+         </attribute>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <widget class="TaurusPlot" name="DDplotA1" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item rowspan="2" row="0" column="1" >
+           <layout class="QVBoxLayout" >
+            <item>
+             <widget class="QGroupBox" name="groupBoxDD1" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>16777215</width>
+                <height>400</height>
+               </size>
+              </property>
+              <property name="title" >
+               <string>Acquisition</string>
+              </property>
+              <layout class="QGridLayout" >
+               <property name="margin" >
+                <number>5</number>
+               </property>
+               <item row="0" column="0" >
+                <widget class="QLabel" name="label_25" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>64</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Samples</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0" >
+                <widget class="QLabel" name="label_29" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Loops</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0" >
+                <widget class="QLabel" name="label_28" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Triggers</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1" >
+                <widget class="TaurusLabel" name="DDTriggers1" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0" >
+                <widget class="QLabel" name="label_35" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Single</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="0" >
+                <widget class="QLabel" name="label_37" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Dec. 64</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="1" >
+                <widget class="QPushButton" name="DDstart1" >
+                 <property name="toolTip" >
+                  <string>(Command)</string>
+                 </property>
+                 <property name="text" >
+                  <string>Start</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="11" column="1" >
+                <widget class="QPushButton" name="DDstop1" >
+                 <property name="text" >
+                  <string>Stop</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1" >
+                <widget class="TaurusValueLineEdit" name="DDNSamples1" />
+               </item>
+               <item row="0" column="1" >
+                <widget class="TaurusLabel" name="DDNSamplesRB1" >
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1" >
+                <widget class="TaurusLabel" name="DDloopsRB1" >
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1" >
+                <widget class="QCheckBox" name="DDcheckSingle1" >
+                 <property name="text" >
+                  <string/>
+                 </property>
+                 <property name="checked" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="1" >
+                <widget class="QFrame" name="frame1" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="frameShape" >
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="frameShadow" >
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout" >
+                  <item>
+                   <widget class="TaurusLed" name="DDDecimationRB1" />
+                  </item>
+                  <item>
+                   <widget class="TaurusValueCheckBox" name="DDDecimation1" >
+                    <property name="enabled" >
+                     <bool>true</bool>
+                    </property>
+                    <property name="text" >
+                     <string/>
+                    </property>
+                    <property name="checkable" >
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked" >
+                     <bool>false</bool>
+                    </property>
+                    <property name="showText" >
+                     <bool>false</bool>
+                    </property>
+                    <property name="autoApply" >
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="4" column="1" >
+                <widget class="TaurusValueLineEdit" name="DDloops1" />
+               </item>
+               <item row="12" column="1" >
+                <widget class="QPushButton" name="DDsave" >
+                 <property name="text" >
+                  <string>Save</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="13" column="0" >
+                <widget class="QLabel" name="labelDDTimestamp" >
+                 <property name="text" >
+                  <string>Timestamp</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="13" column="1" >
+                <layout class="QHBoxLayout" name="horizontalLayout_6" >
+                 <item>
+                  <widget class="TaurusLed" name="DDtimestampRB" />
+                 </item>
+                 <item>
+                  <widget class="TaurusValueCheckBox" name="DDtimestamp" >
+                   <property name="showText" >
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoApply" >
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0" >
+           <widget class="TaurusPlot" name="DDplotA2" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_3" >
+         <attribute name="title" >
+          <string>DD QSum</string>
+         </attribute>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <widget class="TaurusPlot" name="DDplotB1" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item rowspan="2" row="0" column="1" >
+           <layout class="QGridLayout" >
+            <item row="0" column="0" >
+             <widget class="QGroupBox" name="groupBoxDD2" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>16777215</width>
+                <height>400</height>
+               </size>
+              </property>
+              <property name="title" >
+               <string>Acquisition</string>
+              </property>
+              <layout class="QGridLayout" >
+               <property name="margin" >
+                <number>5</number>
+               </property>
+               <item row="0" column="0" >
+                <widget class="QLabel" name="label_38" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>64</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Samples</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0" >
+                <widget class="QLabel" name="label_41" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Loops</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0" >
+                <widget class="QLabel" name="label_44" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Triggers</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1" >
+                <widget class="TaurusLabel" name="DDTriggers2" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0" >
+                <widget class="QLabel" name="label_40" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Single</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1" >
+                <widget class="QCheckBox" name="DDcheckSingle2" >
+                 <property name="text" >
+                  <string/>
+                 </property>
+                 <property name="checked" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="0" >
+                <widget class="QLabel" name="label_45" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Dec. 64</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="1" >
+                <widget class="QPushButton" name="DDstart2" >
+                 <property name="text" >
+                  <string>Start</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="1" >
+                <widget class="QPushButton" name="DDstop2" >
+                 <property name="text" >
+                  <string>Stop</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1" >
+                <widget class="TaurusValueLineEdit" name="DDNSamples2" />
+               </item>
+               <item row="0" column="1" >
+                <widget class="TaurusLabel" name="DDNSamplesRB2" >
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1" >
+                <widget class="TaurusLabel" name="DDloopsRB2" >
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="1" >
+                <widget class="QFrame" name="frame2" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="frameShape" >
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="frameShadow" >
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_2" >
+                  <item>
+                   <widget class="TaurusLed" name="DDDecimationRB2" />
+                  </item>
+                  <item>
+                   <widget class="TaurusValueCheckBox" name="DDDecimation2" >
+                    <property name="enabled" >
+                     <bool>true</bool>
+                    </property>
+                    <property name="showText" >
+                     <bool>false</bool>
+                    </property>
+                    <property name="autoApply" >
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="4" column="1" >
+                <widget class="TaurusValueLineEdit" name="DDloops2" />
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="0" >
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0" >
+           <widget class="TaurusPlot" name="DDplotB2" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_4" >
+         <attribute name="title" >
+          <string>PM XZVolt</string>
+         </attribute>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <widget class="TaurusPlot" name="PMplotA1" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item rowspan="2" row="0" column="1" >
+           <layout class="QGridLayout" >
+            <item row="0" column="0" >
+             <widget class="QGroupBox" name="groupBoxPM1" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="title" >
+               <string>Acquisition</string>
+              </property>
+              <layout class="QGridLayout" >
+               <property name="margin" >
+                <number>5</number>
+               </property>
+               <item row="0" column="0" >
+                <widget class="QLabel" name="label_48" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>64</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Samples</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1" >
+                <widget class="QPushButton" name="PMreset1" >
+                 <property name="text" >
+                  <string>Reset PM</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1" >
+                <widget class="QPushButton" name="PMstart1" >
+                 <property name="text" >
+                  <string>Start</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1" >
+                <widget class="TaurusValueLineEdit" name="PMNSamples1" />
+               </item>
+               <item row="0" column="1" >
+                <widget class="TaurusLabel" name="PMNSamplesRB1" >
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0" >
+                <widget class="QLabel" name="labelPMTimestamp" >
+                 <property name="text" >
+                  <string>Timestamp</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1" >
+                <widget class="QPushButton" name="PMsave" >
+                 <property name="text" >
+                  <string>Save</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1" >
+                <layout class="QHBoxLayout" name="horizontalLayout_7" >
+                 <item>
+                  <widget class="TaurusLed" name="PMtimestampRB" />
+                 </item>
+                 <item>
+                  <widget class="TaurusValueCheckBox" name="PMtimestamp" >
+                   <property name="showText" >
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoApply" >
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="0" >
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0" >
+           <widget class="TaurusPlot" name="PMplotA2" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_5" >
+         <attribute name="title" >
+          <string>PM QSum</string>
+         </attribute>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <widget class="TaurusPlot" name="PMplotB1" />
+          </item>
+          <item rowspan="2" row="0" column="1" >
+           <layout class="QVBoxLayout" >
+            <property name="spacing" >
+             <number>4</number>
+            </property>
+            <item>
+             <widget class="QGroupBox" name="groupBoxPM2" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="title" >
+               <string>Acquisition</string>
+              </property>
+              <layout class="QGridLayout" >
+               <property name="margin" >
+                <number>5</number>
+               </property>
+               <property name="spacing" >
+                <number>4</number>
+               </property>
+               <item row="0" column="0" >
+                <widget class="QLabel" name="label_58" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>64</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Samples</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1" >
+                <widget class="QPushButton" name="PMreset2" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="text" >
+                  <string>Reset PM</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1" >
+                <widget class="QPushButton" name="PMstart2" >
+                 <property name="text" >
+                  <string>Start</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1" >
+                <widget class="TaurusValueLineEdit" name="PMNSamples2" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1" >
+                <widget class="TaurusLabel" name="PMNSamplesRB2" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Preferred" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType" >
+               <enum>QSizePolicy::Expanding</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>20</width>
+                <height>31</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0" >
+           <widget class="TaurusPlot" name="PMplotB2" />
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_6" >
+         <attribute name="title" >
+          <string>SA XZVolt</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_6" >
+          <item row="0" column="0" >
+           <widget class="TaurusPlot" name="SAplotA1" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item rowspan="2" row="0" column="1" >
+           <layout class="QGridLayout" name="gridLayout_5" >
+            <item row="0" column="0" >
+             <widget class="QGroupBox" name="groupBoxSA1" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>16777215</width>
+                <height>400</height>
+               </size>
+              </property>
+              <property name="title" >
+               <string>Acquisition</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_4" >
+               <item row="0" column="0" >
+                <widget class="QLabel" name="label_68" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>64</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Samples</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1" >
+                <widget class="TaurusLabel" name="SANSamplesRB1" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1" >
+                <widget class="TaurusValueLineEdit" name="SANSamples1" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0" >
+                <widget class="QLabel" name="label_74" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Sleep (ms)</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1" >
+                <widget class="TaurusLabel" name="SAtimesleepRB1" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                 <property name="showText" stdset="0" >
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1" >
+                <widget class="TaurusValueLineEdit" name="SAtimesleep1" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1" >
+                <widget class="QPushButton" name="SAstart1" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text" >
+                  <string>Start</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1" >
+                <widget class="QPushButton" name="SAstop1" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text" >
+                  <string>Stop</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0" >
+                <widget class="QLabel" name="label_72" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>TimeStamp</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1" >
+                <layout class="QHBoxLayout" name="horizontalLayout_4" >
+                 <item>
+                  <widget class="TaurusLed" name="SAtimestampRB1" />
+                 </item>
+                 <item>
+                  <widget class="TaurusValueCheckBox" name="SAtimestamp1" >
+                   <property name="sizePolicy" >
+                    <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="showText" >
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoApply" >
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="0" >
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>199</width>
+                <height>347</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0" >
+           <widget class="TaurusPlot" name="SAplotA2" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_7" >
+         <attribute name="title" >
+          <string>SA QSum</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_3" >
+          <item row="0" column="0" >
+           <widget class="TaurusPlot" name="SAplotB1" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item rowspan="2" row="0" column="1" >
+           <layout class="QGridLayout" name="gridLayout_2" >
+            <item row="1" column="0" >
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>199</width>
+                <height>346</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="0" >
+             <widget class="QGroupBox" name="groupBoxSA2" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>16777215</width>
+                <height>400</height>
+               </size>
+              </property>
+              <property name="title" >
+               <string>Acquisition</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout" >
+               <item row="0" column="0" >
+                <widget class="QLabel" name="label_78" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize" >
+                  <size>
+                   <width>64</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Samples</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1" >
+                <widget class="TaurusLabel" name="SANSamplesRB2" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1" >
+                <widget class="TaurusValueLineEdit" name="SANSamples2" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0" >
+                <widget class="QLabel" name="label_75" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Sleep (ms)</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1" >
+                <widget class="TaurusLabel" name="SAtimesleepRB2" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1" >
+                <widget class="TaurusValueLineEdit" name="SAtimesleep2" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1" >
+                <widget class="QPushButton" name="SAstart2" >
+                 <property name="text" >
+                  <string>Start</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1" >
+                <widget class="QPushButton" name="SAstop2" >
+                 <property name="text" >
+                  <string>Stop</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0" >
+                <widget class="QLabel" name="label_82" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>TimeStamp</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1" >
+                <layout class="QHBoxLayout" name="horizontalLayout_3" >
+                 <item>
+                  <widget class="TaurusLed" name="SAtimestampRB2" />
+                 </item>
+                 <item>
+                  <widget class="TaurusValueCheckBox" name="SAtimestamp2" >
+                   <property name="sizePolicy" >
+                    <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="showText" >
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoApply" >
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0" >
+           <widget class="TaurusPlot" name="SAplotB2" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_9" >
+         <attribute name="title" >
+          <string>FA XZVolt</string>
+         </attribute>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <widget class="TaurusPlot" name="FAplotA1" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item rowspan="2" row="0" column="1" >
+           <layout class="QVBoxLayout" >
+            <item>
+             <widget class="QGroupBox" name="groupBoxFA1" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>16777215</width>
+                <height>400</height>
+               </size>
+              </property>
+              <property name="title" >
+               <string>Acquisition</string>
+              </property>
+              <layout class="QGridLayout" >
+               <property name="margin" >
+                <number>5</number>
+               </property>
+               <item row="0" column="0" >
+                <widget class="QLabel" name="label_88" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>64</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Samples</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0" >
+                <widget class="QLabel" name="label_91" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>First Count</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1" >
+                <widget class="TaurusValueLineEdit" name="FAfirstcount1" />
+               </item>
+               <item row="4" column="0" >
+                <widget class="QLabel" name="label_94" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Last Count</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1" >
+                <widget class="TaurusValueLineEdit" name="FAlastcount1" />
+               </item>
+               <item row="5" column="1" >
+                <widget class="QPushButton" name="FAstart1" >
+                 <property name="text" >
+                  <string>Start</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1" >
+                <widget class="QPushButton" name="FAsave1" >
+                 <property name="text" >
+                  <string>Save</string>
+                 </property>
+                 <property name="icon" >
+                  <iconset resource="ctdibpm.qrc" >
+                   <normaloff>:/icons/icons/save.png</normaloff>:/icons/icons/save.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="0" >
+                <widget class="QLabel" name="label_92" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>TimeStamp</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="1" >
+                <widget class="QCheckBox" name="FAtimestamp1" >
+                 <property name="text" >
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1" >
+                <widget class="TaurusValueLineEdit" name="FANSamples1" />
+               </item>
+               <item row="0" column="1" >
+                <widget class="TaurusLabel" name="FANSamplesRB1" >
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0" >
+           <widget class="TaurusPlot" name="FAplotA2" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_10" >
+         <attribute name="title" >
+          <string>FA QSum</string>
+         </attribute>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <widget class="TaurusPlot" name="FAplotB1" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item rowspan="2" row="0" column="1" >
+           <layout class="QVBoxLayout" >
+            <item>
+             <widget class="QGroupBox" name="groupBoxFA2" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>16777215</width>
+                <height>400</height>
+               </size>
+              </property>
+              <property name="title" >
+               <string>Acquisition</string>
+              </property>
+              <layout class="QGridLayout" >
+               <property name="margin" >
+                <number>5</number>
+               </property>
+               <item row="0" column="0" >
+                <widget class="QLabel" name="label_98" >
+                 <property name="minimumSize" >
+                  <size>
+                   <width>64</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Samples</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0" >
+                <widget class="QLabel" name="label_101" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>First Count</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1" >
+                <widget class="TaurusValueLineEdit" name="FAfirstcount2" />
+               </item>
+               <item row="4" column="0" >
+                <widget class="QLabel" name="label_104" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>Last Count</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1" >
+                <widget class="TaurusValueLineEdit" name="FAlastcount2" />
+               </item>
+               <item row="5" column="1" >
+                <widget class="QPushButton" name="FAstart2" >
+                 <property name="text" >
+                  <string>Start</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1" >
+                <widget class="QPushButton" name="FAsave2" >
+                 <property name="text" >
+                  <string>Save</string>
+                 </property>
+                 <property name="icon" >
+                  <iconset resource="ctdibpm.qrc" >
+                   <normaloff>:/icons/icons/save.png</normaloff>:/icons/icons/save.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="0" >
+                <widget class="QLabel" name="label_102" >
+                 <property name="font" >
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="text" >
+                  <string>TimeStamp</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1" >
+                <widget class="TaurusValueLineEdit" name="FANSamples2" />
+               </item>
+               <item row="0" column="1" >
+                <widget class="TaurusLabel" name="FANSamplesRB2" >
+                 <property name="showQuality" stdset="0" >
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="1" >
+                <widget class="QCheckBox" name="timestamp_9" >
+                 <property name="text" >
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0" >
+           <widget class="TaurusPlot" name="FAplotB2" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1454</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuUnit" >
+    <property name="title" >
+     <string>Unit</string>
+    </property>
+    <addaction name="actionConnectToLibera" />
+   </widget>
+   <widget class="QMenu" name="menuFile" >
+    <property name="title" >
+     <string>File</string>
+    </property>
+    <addaction name="actionLiberaStart" />
+    <addaction name="actionLiberaStop" />
+    <addaction name="actionLiberaRestart" />
+    <addaction name="actionLiberaReboot" />
+    <addaction name="actionLiberaDSInit" />
+    <addaction name="separator" />
+    <addaction name="actionOpen" />
+    <addaction name="actionSave" />
+    <addaction name="actionPrint" />
+    <addaction name="actionScreenshot" />
+    <addaction name="separator" />
+    <addaction name="actionQuit" />
+   </widget>
+   <widget class="QMenu" name="menuMode" >
+    <property name="title" >
+     <string>Mode</string>
+    </property>
+    <addaction name="actionADCTab" />
+    <addaction name="actionDDTab1" />
+    <addaction name="actionDDTab2" />
+    <addaction name="actionPMTab1" />
+    <addaction name="actionPMTab2" />
+    <addaction name="actionSATab1" />
+    <addaction name="actionSATab2" />
+    <addaction name="actionFATab1" />
+    <addaction name="actionFATab2" />
+    <addaction name="actionGain" />
+    <addaction name="actionLog" />
+   </widget>
+   <widget class="QMenu" name="menuSynchronize" >
+    <property name="title" >
+     <string>Synchronize</string>
+    </property>
+    <addaction name="actionSynchronize" />
+   </widget>
+   <widget class="QMenu" name="menuHelp" >
+    <property name="title" >
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp" />
+    <addaction name="actionAbout" />
+   </widget>
+   <addaction name="menuFile" />
+   <addaction name="menuUnit" />
+   <addaction name="menuMode" />
+   <addaction name="menuSynchronize" />
+   <addaction name="menuHelp" />
+  </widget>
+  <widget class="QToolBar" name="toolBar" >
+   <property name="sizePolicy" >
+    <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="windowTitle" >
+    <string>Libera tool bar</string>
+   </property>
+   <property name="orientation" >
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <attribute name="toolBarArea" >
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak" >
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen" />
+   <addaction name="actionSave" />
+   <addaction name="actionPrint" />
+   <addaction name="separator" />
+   <addaction name="actionConnectToLibera" />
+   <addaction name="separator" />
+   <addaction name="actionHelp" />
+   <addaction name="actionQuit" />
+  </widget>
+  <action name="actionOpen" >
+   <property name="icon" >
+    <iconset resource="ctdibpm.qrc" >
+     <normaloff>:/icons/icons/open.png</normaloff>:/icons/icons/open.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave" >
+   <property name="icon" >
+    <iconset resource="ctdibpm.qrc" >
+     <normaloff>:/icons/icons/save.png</normaloff>:/icons/icons/save.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionPrint" >
+   <property name="icon" >
+    <iconset resource="ctdibpm.qrc" >
+     <normaloff>:/icons/icons/print.png</normaloff>:/icons/icons/print.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Print</string>
+   </property>
+   <property name="iconVisibleInMenu" >
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionScreenshot" >
+   <property name="icon" >
+    <iconset resource="ctdibpm.qrc" >
+     <normaloff>:/icons/icons/screenshot.png</normaloff>:/icons/icons/screenshot.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Screenshot</string>
+   </property>
+  </action>
+  <action name="actionQuit" >
+   <property name="icon" >
+    <iconset resource="ctdibpm.qrc" >
+     <normaloff>:/icons/icons/quit.png</normaloff>:/icons/icons/quit.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Quit</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionLibera_Start" >
+   <property name="text" >
+    <string>Libera Start</string>
+   </property>
+  </action>
+  <action name="actionLiberaStart" >
+   <property name="icon" >
+    <iconset resource="ctdibpm.qrc" >
+     <normaloff>:/icons/icons/start2.png</normaloff>:/icons/icons/start2.png</iconset>
+   </property>
+   <property name="text" >
+    <string>LiberaStart</string>
+   </property>
+   <property name="iconVisibleInMenu" >
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionLiberaStop" >
+   <property name="icon" >
+    <iconset resource="ctdibpm.qrc" >
+     <normaloff>:/icons/icons/stop.png</normaloff>:/icons/icons/stop.png</iconset>
+   </property>
+   <property name="text" >
+    <string>LiberaStop</string>
+   </property>
+  </action>
+  <action name="actionLiberaRestart" >
+   <property name="icon" >
+    <iconset resource="ctdibpm.qrc" >
+     <normaloff>:/icons/icons/restart.png</normaloff>:/icons/icons/restart.png</iconset>
+   </property>
+   <property name="text" >
+    <string>LiberaRestart</string>
+   </property>
+  </action>
+  <action name="actionConnectToLibera" >
+   <property name="icon" >
+    <iconset resource="ctdibpm.qrc" >
+     <normaloff>:/icons/icons/selection.png</normaloff>:/icons/icons/selection.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Connect to libera</string>
+   </property>
+  </action>
+  <action name="actionADCTab" >
+   <property name="text" >
+    <string>ADC</string>
+   </property>
+  </action>
+  <action name="actionDDTab1" >
+   <property name="text" >
+    <string>DD X, Z and Voltages</string>
+   </property>
+  </action>
+  <action name="actionDDTab2" >
+   <property name="text" >
+    <string>DD Q and Sum</string>
+   </property>
+  </action>
+  <action name="actionPMTab1" >
+   <property name="text" >
+    <string>PM X, Z and Voltages</string>
+   </property>
+  </action>
+  <action name="actionSATab1" >
+   <property name="text" >
+    <string>SA X, Z and Voltages</string>
+   </property>
+  </action>
+  <action name="actionSATab2" >
+   <property name="text" >
+    <string>SA Q and Sum</string>
+   </property>
+  </action>
+  <action name="actionFATab1" >
+   <property name="text" >
+    <string>FA X, Z and Voltages</string>
+   </property>
+  </action>
+  <action name="actionFATab2" >
+   <property name="text" >
+    <string>FA Q and Sum</string>
+   </property>
+  </action>
+  <action name="actionPMTab2" >
+   <property name="text" >
+    <string>PM Q and Sum</string>
+   </property>
+  </action>
+  <action name="actionSynchronize" >
+   <property name="enabled" >
+    <bool>false</bool>
+   </property>
+   <property name="text" >
+    <string>Synchronize</string>
+   </property>
+  </action>
+  <action name="actionGain" >
+   <property name="text" >
+    <string>Gain scheme</string>
+   </property>
+  </action>
+  <action name="actionHelp" >
+   <property name="icon" >
+    <iconset resource="ctdibpm.qrc" >
+     <normaloff>:/icons/icons/info.png</normaloff>:/icons/icons/info.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Online help</string>
+   </property>
+  </action>
+  <action name="actionAbout" >
+   <property name="icon" >
+    <iconset resource="ctdibpm.qrc" >
+     <normaloff>:/icons/icons/AlbaLogo.png</normaloff>:/icons/icons/AlbaLogo.png</iconset>
+   </property>
+   <property name="text" >
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionLog" >
+   <property name="text" >
+    <string>Log</string>
+   </property>
+  </action>
+  <action name="actionLiberaReboot" >
+   <property name="icon" >
+    <iconset resource="ctdibpm.qrc" >
+     <normaloff>:/icons/icons/reload.png</normaloff>:/icons/icons/reload.png</iconset>
+   </property>
+   <property name="text" >
+    <string>LiberaReboot</string>
+   </property>
+  </action>
+  <action name="actionLiberaDSInit" >
+   <property name="icon" >
+    <iconset resource="ctdibpm.qrc" >
+     <normaloff>:/icons/icons/restart.png</normaloff>:/icons/icons/restart.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Libera DS Init()</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TaurusLabel</class>
+   <extends>QLabel</extends>
+   <header>taurus.qt.qtgui.display</header>
+  </customwidget>
+  <customwidget>
+   <class>TaurusValueLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>taurus.qt.qtgui.input</header>
+  </customwidget>
+  <customwidget>
+   <class>TaurusValueCheckBox</class>
+   <extends>QCheckBox</extends>
+   <header>taurus.qt.qtgui.input</header>
+  </customwidget>
+  <customwidget>
+   <class>TaurusPlot</class>
+   <extends>QwtPlot</extends>
+   <header>taurus.qt.qtgui.plot</header>
+  </customwidget>
+  <customwidget>
+   <class>TaurusLed</class>
+   <extends>QLed</extends>
+   <header>taurus.qt.qtgui.display</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>ADCcheckSingle</tabstop>
+  <tabstop>ADCstart</tabstop>
+  <tabstop>ADCstop</tabstop>
+  <tabstop>PMreset2</tabstop>
+  <tabstop>PMstart2</tabstop>
+  <tabstop>SAstop1</tabstop>
+  <tabstop>SAstart1</tabstop>
+  <tabstop>SAstop2</tabstop>
+  <tabstop>SAstart2</tabstop>
+  <tabstop>FAstart1</tabstop>
+  <tabstop>FAsave1</tabstop>
+  <tabstop>FAfirstcount1</tabstop>
+  <tabstop>FAlastcount1</tabstop>
+  <tabstop>FAstart2</tabstop>
+  <tabstop>FAsave2</tabstop>
+  <tabstop>FAfirstcount2</tabstop>
+  <tabstop>FAlastcount2</tabstop>
+  <tabstop>PMreset1</tabstop>
+  <tabstop>DDstart1</tabstop>
+  <tabstop>PMstart1</tabstop>
+  <tabstop>DDcheckSingle1</tabstop>
+  <tabstop>DDstop1</tabstop>
+  <tabstop>DDstart2</tabstop>
+  <tabstop>DDcheckSingle2</tabstop>
+  <tabstop>DDstop2</tabstop>
+ </tabstops>
+ <resources>
+  <include location="ctdibpm.qrc" />
+ </resources>
+ <connections/>
+</ui>

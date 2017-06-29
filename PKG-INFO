@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: ctdibpm
+Version: 1.1.0a0
+Summary: GUI for BPM Configuration
+Home-page: https://git.cells.es/controls/ctdibpm
+Author: ct4
+Author-email: ct4@cells.es
+License: GPLv3+
+Description: Graphical User Interface for Beam Position Monitor Configuration
+Keywords: GUI
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: 
+Requires: setuptools (>=1.1)

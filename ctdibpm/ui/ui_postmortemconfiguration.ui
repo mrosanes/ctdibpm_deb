@@ -1,0 +1,198 @@
+<ui version="4.0">
+ <class>PostMortemConfiguration</class>
+ <widget class="QDockWidget" name="PostMortemConfiguration">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>635</width>
+    <height>154</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Post Mortem configuration</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="labelPMmode">
+      <property name="text">
+       <string>Mode</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="comboPMmode">
+      <item>
+       <property name="text">
+        <string>External</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Interlock</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Position</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="labelPMxlow">
+      <property name="toolTip">
+       <string>Interlock X Low</string>
+      </property>
+      <property name="text">
+       <string>X low</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="PMxlow">
+      <property name="sizePolicy">
+       <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="labelPMzlow">
+      <property name="toolTip">
+       <string>Interlock Z Low</string>
+      </property>
+      <property name="text">
+       <string>Z low</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QLineEdit" name="PMzlow">
+      <property name="sizePolicy">
+       <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="labelPMxhigh">
+      <property name="toolTip">
+       <string>Interlock X High</string>
+      </property>
+      <property name="text">
+       <string>X high</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="PMxhigh">
+      <property name="sizePolicy">
+       <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLabel" name="labelPMzhigh">
+      <property name="toolTip">
+       <string>Interlock Z High</string>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Z high</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QLineEdit" name="PMzhigh">
+      <property name="sizePolicy">
+       <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="labelEPoverflim">
+      <property name="toolTip">
+       <string>Interlock overflow limit</string>
+      </property>
+      <property name="text">
+       <string>Overf lim</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="PMoverflim">
+      <property name="sizePolicy">
+       <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QLabel" name="labelPMoverfdur">
+      <property name="text">
+       <string>Overf Dur</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QLineEdit" name="PMoverfdur">
+      <property name="sizePolicy">
+       <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4">
+     <widget class="QPushButton" name="buttonPMget">
+      <property name="text">
+       <string>Get</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QPushButton" name="buttonPMset">
+      <property name="text">
+       <string>Set</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="5">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::MinimumExpanding</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
