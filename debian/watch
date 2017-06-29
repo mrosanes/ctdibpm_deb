@@ -1,4 +1,5 @@
 # please also check http://pypi.debian.net/ctdibpm/watch
 version=3
-opts=uversionmangle=s/(rc|a|b|c)/~$1/ \
-http://pypi.debian.net/ctdibpm/ctdibpm-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
+opts=filenamemangle=s/.*\.tar\.gz\?ref=v?(\d\S+)/ctdibpm-$1\.tar\.gz/g \
+  https://git.cells.es/controls/ctdibpm/tags?sort=updated_desc .*archive\.tar\.gz\?ref=v?(\d\S+)
+
