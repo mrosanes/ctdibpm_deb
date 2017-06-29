@@ -1,0 +1,14 @@
+Source: ctdibpm
+Maintainer: mrosanes <mrosanes@cells.es>
+Section: python
+Priority: optional
+Build-Depends: dh-python, python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3), debhelper (>= 9), dh-exec
+Standards-Version: 3.9.6
+Homepage: https://git.cells.es/controls/ctdibpm
+
+Package: python-ctdibpm
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-tango, python-taurus
+Description: GUI for BPM Configuration
+ Graphical User Interface for Beam Position Monitor Configuration
+
