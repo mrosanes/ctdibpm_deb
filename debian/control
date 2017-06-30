@@ -10,7 +10,7 @@ Build-Depends: dh-python,
 Standards-Version: 3.9.8
 Homepage: https://git.cells.es/controls/ctdibpm
 
-Package: python-ctdibpm
+Package: ctdibpm
 Architecture: all
 Depends: ${misc:Depends}, 
          ${python:Depends}, 
