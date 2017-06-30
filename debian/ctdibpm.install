@@ -1,0 +1,3 @@
+#!/usr/bin/dh-exec
+debian/ctdibpm/usr/bin/ctdibpm => /usr/share/ctdibpm/ctdibpm_
+distribute/ctdibpm.desktop /usr/share/applications

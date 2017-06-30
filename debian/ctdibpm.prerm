@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+if [ "$1" = "remove" ]; then
+	find /usr/share/ctdibpm -iname "*.pyc" -exec rm {} \;
+fi
+
+#DEBHELPER#
+exit
