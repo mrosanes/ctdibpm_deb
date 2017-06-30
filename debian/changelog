@@ -1,3 +1,17 @@
+ctdibpm (1.1.2-0~bpo9+0~alba+1) stretch-backports; urgency=medium
+
+  * local package
+  * Fix .install file with renamed folder
+  * Remove permits
+  * Add points between paragraphs
+  * Add lintian overrides file
+  * Add lintian override for description
+  * Fix lintian overrides
+  * Modify permits
+  * New upstream version 1.1.2
+
+ -- mrosanes <mrosanes@cells.es>  Fri, 30 Jun 2017 09:13:39 +0000
+
 ctdibpm (1.1.1-0~bpo9+0~alba+1) stretch-backports; urgency=medium
 
   * Modify watch file
