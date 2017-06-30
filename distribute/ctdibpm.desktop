@@ -6,5 +6,6 @@ Exec=ctdibpm
 Icon=ctdibpm
 Terminal=false
 Type=Application
-Categories=X-albact;X-albact-di;
+Categories=Graphics;
+Keywords=X-albact;X-albact-di;
 StartupNotify=true
