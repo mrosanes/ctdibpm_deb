@@ -44,6 +44,7 @@ import webbrowser
 from datetime import datetime
 from optparse import OptionParser
 
+__version = '1.1.4'  # managed by bumpversion, do not edit manually
 
 # Enumeration Values
 SWITCHES_DIRECT         = 0
@@ -483,7 +484,7 @@ class MainWindow(QtGui.QMainWindow):
             name, ok = QtGui.QInputDialog.getItem(self, self.tr("Libera Selection"),
                                             self.tr("Libera device name:"),deviceList)
             if ok:
-                self.connectLibera(str(name.toAscii()))
+                self.connectLibera(str(name))
 
         def onActionSynchronize(self):
             self.synctime.show()
@@ -551,7 +552,7 @@ class MainWindow(QtGui.QMainWindow):
                 fileName = QtGui.QFileDialog.getOpenFileName(self,
                     self.tr("Open Environment Parameters"), DEFAULT_PATH,
                     self.tr("DAT (*.dat)"))
-                if fileName.isEmpty():
+                if fileName == '':
                     return
 
                 textEdit = self.openFile(fileName)
@@ -629,7 +630,7 @@ class MainWindow(QtGui.QMainWindow):
                 fileName = QtGui.QFileDialog.getSaveFileName(self,
                     self.tr("Save Environment Parameters"), DEFAULT_PATH + "EP.dat",
                     self.tr("DAT (*.dat)"))
-                if fileName.isEmpty():
+                if fileName == '':
                     return False
 
                 return self.saveFile(fileName)
@@ -686,7 +687,7 @@ class MainWindow(QtGui.QMainWindow):
 
         def onActionPrint(self):
                 index = self.ui.tabWidget.currentIndex()
-                fileName = self.ui.tabWidget.tabText(index).toAscii()
+                fileName = self.ui.tabWidget.tabText(index)
 
                 if index == 0:
                     self.ui.ADCplot.exportPrint()
@@ -797,12 +798,12 @@ class PostMortemConfiguration(QtGui.QDockWidget):
 
             write_values = [
                 (self.ui.comboPMmode.currentIndex(), True),
-                self.ui.PMxhigh.text().toFloat(),
-                self.ui.PMxlow.text().toFloat(),
-                self.ui.PMzhigh.text().toFloat(),
-                self.ui.PMzlow.text().toFloat(),
-                self.ui.PMoverflim.text().toInt(),
-                self.ui.PMoverfdur.text().toInt(),
+                (float(self.ui.PMxhigh.text()), True),  # QString -> str
+                (float(self.ui.PMxlow.text()), True),
+                (float(self.ui.PMzhigh.text()), True),
+                (float(self.ui.PMzlow.text()), True),
+                (int(self.ui.PMoverflim.text()), True),
+                (int(self.ui.PMoverfdur.text()), True),
             ]
 
             for idx, pair in enumerate(write_values):
@@ -1305,7 +1306,7 @@ class SetTime(QtGui.QDialog):
         v6 = self.ui.HourLineEdit.text()
         v7 = self.ui.MinuteLineEdit.text() 
         v8 = self.ui.SecondLineEdit.text() 
-        msg = str( (v1+'.'+v2+':'+v3+v4+v5+v6+v7+'.'+v8).toAscii() )
+        msg = str(v1+'.'+v2+':'+v3+v4+v5+v6+v7+'.'+v8)
         self.ui.LiberaMessageLineEdit.setText(msg)
 
         # Check parameters
@@ -1417,7 +1418,7 @@ class SyncTime(QtGui.QDialog):
         v4 = self.ui.HourLineEdit.text()
         v5 = self.ui.MinuteLineEdit.text() 
         v6 = self.ui.SecondLineEdit.text() 
-        dateTime = str( (v1+v2+v3+v4+v5+v6).toAscii() )
+        dateTime = str(v1+v2+v3+v4+v5+v6)
 
         try:
             timeInEpoch = float(calendar.timegm(time.strptime(dateTime, '%Y%m%d%H%M%S')))
@@ -1502,7 +1503,7 @@ class SyncTime(QtGui.QDialog):
         fileName = QtGui.QFileDialog.getSaveFileName(self,
             self.tr("Save liberas times configuration"),  DEFAULT_PATH + "LiberasTimes.dat",
             self.tr("DAT (*.dat)"))
-        if fileName.isEmpty():
+        if fileName == '':
             return False
         file = open(fileName,'w')
         line = "# Liberas time configuration file. Format is:\n"
@@ -1530,7 +1531,7 @@ class SyncTime(QtGui.QDialog):
         fileName = QtGui.QFileDialog.getOpenFileName(self,
             self.tr("Open liberas times file"), DEFAULT_PATH,
             self.tr("DAT (*.dat)"))
-        if fileName.isEmpty():
+        if fileName == '':
             return
         file = open(fileName,'r')
         try:
@@ -1616,7 +1617,7 @@ class GainScheme(QtGui.QWidget):
                 return False
         fileName = QtGui.QFileDialog.getOpenFileName(self,
             self.tr("Open gain scheme"), ".", self.tr("CONF (*.conf)"))
-        if fileName.isEmpty():
+        if fileName == '':
             return False
 
         gainFile = QtCore.QFile(fileName)
@@ -1638,7 +1639,7 @@ class GainScheme(QtGui.QWidget):
             fileName = QtGui.QFileDialog.getSaveFileName(self,
                 self.tr("Save gain configuration"), GAIN_FILENAME,
                 self.tr("CONF (*.conf)"))
-            if fileName.isEmpty():
+            if fileName == '':
                 return False
 
         # Save contents to file
@@ -1739,7 +1740,7 @@ class Log(QtGui.QDialog):
         if fileName == None:
             fileName = QtGui.QFileDialog.getSaveFileName(self,
                 self.tr("Save log into a file"), "libera.log", self.tr("LOG (*.log)"))
-            if fileName.isEmpty():
+            if fileName == '':
                 return False
 
         # Save contents to file
@@ -1765,7 +1766,7 @@ def main():
     parser = argparse.get_taurus_parser()
     parser.add_option("-d", "--device-name", action="store", dest="liberaDsName", type="string", help="Libera device name to connect to")
     app = TaurusApplication(sys.argv, cmd_line_parser=parser,
-                      app_name="ctdibpm", app_version="1.1",
+                      app_name="ctdibpm", app_version=__version,
                       org_domain="ALBA", org_name="ALBA")
     options = app.get_command_line_options()
     ui = MainWindow(liberaDeviceName=options.liberaDsName)

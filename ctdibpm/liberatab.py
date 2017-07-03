@@ -129,9 +129,9 @@ class LiberaTab:
                 file_attr_name = "%sFileName" % self.data_sources[self.tabName]
                 defaultName = self.dp.read_attribute(file_attr_name).value
                 fileName, ok = QtGui.QInputDialog.getText(None, "File name", "File name:", QtGui.QLineEdit.Normal, defaultName)
-                if (not ok or fileName.isEmpty()):
+                if (not ok or fileName == ''):
                     return False
-                fileName = str(fileName.toAscii()) #convert to normal string
+                fileName = str(fileName) #convert to normal string
 
                 # Call to DS save function
                 if(self.dsPyName):
